@@ -6,9 +6,7 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.*;
 
 import jakarta.persistence.*;
-//import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
-import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 import java.util.Set;
 
@@ -28,12 +26,6 @@ public class IngredientEntity {
     @NotBlank(message = "Ingredient name can not be blank.")
     @Size(max = 200, message = "Ingredient name can not be more than 200 characters long.")
     private String name;
-
-//    @ManyToOne(fetch = FetchType.LAZY)
-//    @JoinColumn(name = "fk_recipe_id")
-//    @Fetch(FetchMode.JOIN)
-//    @JsonIgnore
-//    private RecipeEntity recipe;
 
     @ManyToMany(fetch = FetchType.LAZY,
             cascade = {

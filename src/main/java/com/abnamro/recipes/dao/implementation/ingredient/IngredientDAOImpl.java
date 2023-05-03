@@ -3,7 +3,6 @@ package com.abnamro.recipes.dao.implementation.ingredient;
 import com.abnamro.recipes.dao.definition.ingredient.IIngredientDAO;
 import com.abnamro.recipes.dao.entity.ingredient.IngredientEntity;
 import com.abnamro.recipes.dao.repository.ingredient.IngredientRepository;
-import com.abnamro.recipes.dao.repository.recipe.RecipeRepository;
 import com.abnamro.recipes.exception.ApiRequestException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
@@ -17,9 +16,6 @@ public class IngredientDAOImpl implements IIngredientDAO {
 
     @Autowired
     private IngredientRepository ingredientRepository;
-
-    @Autowired
-    private RecipeRepository recipeRepository;
 
 
     @Override

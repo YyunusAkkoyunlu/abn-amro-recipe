@@ -1,7 +1,6 @@
 package com.abnamro.recipes.dao.entity.user;
 
 import jakarta.persistence.*;
-//import javax.persistence.*;
 import lombok.*;
 
 @Table(name = "Users")

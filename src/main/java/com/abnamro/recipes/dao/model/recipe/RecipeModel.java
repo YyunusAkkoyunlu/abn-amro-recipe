@@ -4,7 +4,6 @@ import com.abnamro.recipes.dao.model.user.UserModel;
 import com.abnamro.recipes.dao.model.ingredient.IngredientModel;
 import lombok.*;
 
-import java.util.List;
 import java.util.Set;
 
 @Data
@@ -25,7 +24,6 @@ public class RecipeModel {
 
     private int numberOfPerson;
 
-//    private List<IngredientModel> ingredients;
     private Set<IngredientModel> ingredients;
 
     private String instructions;

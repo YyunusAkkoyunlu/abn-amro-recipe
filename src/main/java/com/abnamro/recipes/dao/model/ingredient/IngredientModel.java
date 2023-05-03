@@ -3,7 +3,6 @@ package com.abnamro.recipes.dao.model.ingredient;
 import com.abnamro.recipes.dao.entity.ingredient.IngredientEntity;
 import lombok.*;
 
-import javax.validation.constraints.NotNull;
 
 @Data
 @Builder

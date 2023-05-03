@@ -5,9 +5,7 @@ import com.abnamro.recipes.dao.entity.ingredient.IngredientEntity;
 import jakarta.persistence.*;
 import lombok.*;
 
-//import javax.persistence.*;
 import javax.validation.constraints.*;
-import java.util.List;
 import java.util.Set;
 
 @Table(name = "Recipe")
@@ -37,14 +35,7 @@ public class RecipeEntity {
     @Min(value = 1, message = "Number of servings must be at least 1")
     private int numberOfPerson;
 
-/*    @NotEmpty(message = "Ingredients can not be empty.")
-//    @OneToMany(mappedBy = "recipe", fetch = FetchType.EAGER, cascade = CascadeType.ALL, orphanRemoval = true) // mappedBy = "recipe", fetch = FetchType.LAZY
-    @OneToMany(cascade = CascadeType.ALL) // mappedBy = "recipe", fetch = FetchType.LAZY
-    @JoinColumn(name = "fk_recipe_id", referencedColumnName = "id")
-    private List<IngredientEntity> ingredients;*/
-
     @NotEmpty(message = "Ingredients can not be empty.")
-//    @OneToMany(mappedBy = "recipe", fetch = FetchType.EAGER, cascade = CascadeType.ALL, orphanRemoval = true) // mappedBy = "recipe", fetch = FetchType.LAZY
     @ManyToMany(fetch = FetchType.EAGER) // mappedBy = "recipe", fetch = FetchType.LAZY
     @JoinTable(name = "recipe_ingredient",
             joinColumns = @JoinColumn(name = "recipeId"),
