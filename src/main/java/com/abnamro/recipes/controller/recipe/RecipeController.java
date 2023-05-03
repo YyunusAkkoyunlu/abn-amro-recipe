@@ -13,9 +13,6 @@ import java.util.List;
 @RequestMapping("/recipe")
 public class RecipeController {
 
-
-    //todo: swagger-ui
-
     @Autowired
     RecipeService recipeService;
 
